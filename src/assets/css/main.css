@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "Sahel";
+	font-weight: 500;
+	src: url("../fonts/Sahel-FD.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Sahel";
+	font-weight: 700;
+	src: url("../fonts/Sahel-Bold-FD.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Sahel";
+	font-weight: 900;
+	src: url("../fonts/Sahel-Black-FD.woff2") format("woff2");
+}
+
+body {
+	font-family: "Sahel";
+	font-weight: 500;
+}
+
+.container {
+	max-width: 1000px;
+	padding: 0 15px 0 15px;
+	margin: 0 auto;
+}
+
+.container-small {
+	max-width: 650px;
+	padding: 0 15px 0 15px;
+	margin: 0 auto;
+}
+
+.custom-radio {
+	appearance: none;
+	background-color: #fff;
+	border: 1px solid #d1d5db;
+	border-radius: 50%;
+	display: inline-block;
+	position: relative;
+	width: 1.75rem;
+	height: 1.75rem;
+	cursor: pointer;
+	outline: none;
+}
+
+.custom-radio:checked::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.radio-correct:checked::before {
+	background-color: #4ade80; /* Emerald-600 */
+}
+
+.radio-incorrect:checked::before {
+	background-color: #e11d48; /* Red-600 */
+}
+
+/* Optional: Hover effect */
+.custom-radio:hover {
+	border-color: #6b7280; /* Gray-600 */
+}
